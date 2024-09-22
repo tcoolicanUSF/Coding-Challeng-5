@@ -23,4 +23,8 @@ const inventory = [
 console.log(inventory);
 
 //Task 2: Create an Orders Array of Order Objects
+let orders = [];
+
+//Task 3: Create a Function to Place an Order
+
 
