@@ -70,3 +70,12 @@ function completeOrder (customerid){
 console.log(completeOrder("TuaTagovailoa"))
 
 //Task 6: Create a Function to Check Pending Orders
+function checkPendingOrders() {
+    orders.forEach(orders =>
+    { if (orders.status === 'Pending') {
+        console.log(orders)
+    }
+    })};
+
+console.log('Pending Order Details', (checkPendingOrders()))
+
