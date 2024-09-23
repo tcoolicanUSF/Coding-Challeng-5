@@ -27,4 +27,20 @@ let orders = [];
 
 //Task 3: Create a Function to Place an Order
 
+function placeOrder(customerName, orderedItems) {
+    orderedItems.array.forEach(item => {
+        let product = inventory.find(product => product.name === item.name);
+        if (!product || product.quantity < item.quantity) {
+            return `ERROR: No stock available for ${item.name}` //Error Response Text
+        } else {
+            return product.quantity -= item.quantity
+        }})
 
+orders.push({
+    customerName,
+    item: orderedItems,
+    status: 'Pending'
+});
+}
+
+//Task 4: Create a Function to Calculate Total for an Order
