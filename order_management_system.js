@@ -42,5 +42,21 @@ orders.push({
     status: 'Pending'
 });
 }
+//Order Test 
+placeOrder('Tua Tagovailoa', [
+    {name: 'Riddell Axiom', quantity: 3},
+    {name: 'Schutt F7', quantity: 2}
+])
 
 //Task 4: Create a Function to Calculate Total for an Order
+function calculateOrderTotal(order) {
+    return order.item.reduce((totalOrder, item) => {
+        let product = inventory.find(product => product.name === item.name);
+        return totalOrder + (item.quantity * product.price)
+    }, 0);
+}
+//Order Test
+let TuaOrder = orders [0]
+console.log(`Tua's order total is: $${calculateOrderTotal(TuaOrder)}`)
+
+//Task 5: Create a Function to Mark an Order as Completed
