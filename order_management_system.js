@@ -28,7 +28,7 @@ let orders = [];
 //Task 3: Create a Function to Place an Order
 
 function placeOrder(customerName, orderedItems) {
-    orderedItems.array.forEach(item => {
+    orderedItems.forEach(item => {
         let product = inventory.find(product => product.name === item.name);
         if (!product || product.quantity < item.quantity) {
             return `ERROR: No stock available for ${item.name}` //Error Response Text
@@ -60,3 +60,13 @@ let TuaOrder = orders [0]
 console.log(`Tua's order total is: $${calculateOrderTotal(TuaOrder)}`)
 
 //Task 5: Create a Function to Mark an Order as Completed
+function completeOrder (customerid){
+    let order = orders.find(order => order.name === customerid)
+    if (orders.status = 'Pending') {
+        return orders.status = 'Completed'
+    }}
+
+//Customer ID Test
+console.log(completeOrder("TuaTagovailoa"))
+
+//Task 6: Create a Function to Check Pending Orders
